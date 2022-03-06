@@ -33,4 +33,20 @@ class MainActivity : AppCompatActivity() {
 
         outState?.putString(NOMBRE, nombre)
     }
+
+
+    override fun onPause() {
+        super.onPause()
+        Toast.makeText(this, "En transición", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Toast.makeText(this, "Aplicativo oculto", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onPostResume() {
+        super.onPostResume()
+        Toast.makeText(this, "Aplicativo visible", Toast.LENGTH_SHORT).show()
+    }
 }
